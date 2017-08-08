@@ -95,10 +95,21 @@ public class ClearPaths {
 		frmClearPaths.getContentPane().add(label_2);
 		
 		JButton btnAdd = new JButton("+");
+		btnAdd.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				//add path in JTable
+				
+			}
+		});
 		btnAdd.setBounds(369, 114, 41, 23);
 		frmClearPaths.getContentPane().add(btnAdd);
 		
 		JButton btnDel = new JButton("-");
+		btnDel.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				//remove path from JTable
+			}
+		});
 		btnDel.setBounds(369, 142, 41, 23);
 		frmClearPaths.getContentPane().add(btnDel);
 		
