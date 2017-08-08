@@ -10,8 +10,11 @@ import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.JButton;
 import java.awt.Font;
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Iterator;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
@@ -149,7 +152,28 @@ public class ClearPaths {
 					}
 				}
 				
-				//сохраняе настройки в файл настроек
+				//сохраняем настройки в файл настроек
+				
+				try(
+					FileWriter writer = new FileWriter(fileSettings);
+					BufferedWriter buffWriter = new BufferedWriter(writer);						
+					) {
+					
+					String selected = (String) comboBoxDisks.getSelectedItem();
+										
+					
+					//buffWriter.write("DISK="+comboBoxDisks.getItemAt(0)+"\n"); //неправильно !!!!!!!!!!!!!!!!!!
+					buffWriter.write("DISK="+comboBoxDisks.getSelectedIndex()+"\n"); //неправильно !!!!!!!!!!!!!!!!!!
+					//System.out.println("MinSpace="+ txtMinSpace.getText() );
+					buffWriter.write("MinSpace="+ txtMinSpace.getText()  +"\n");
+					
+						
+					
+				} catch (IOException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+				
 				
 			}
 		});
