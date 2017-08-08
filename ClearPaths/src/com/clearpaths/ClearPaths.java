@@ -163,10 +163,12 @@ public class ClearPaths {
 										
 					
 					//buffWriter.write("DISK="+comboBoxDisks.getItemAt(0)+"\n"); //неправильно !!!!!!!!!!!!!!!!!!
-					buffWriter.write("DISK="+comboBoxDisks.getSelectedIndex()+"\n"); //неправильно !!!!!!!!!!!!!!!!!!
+					buffWriter.write("Disk="+selected+"\n"); //неправильно !!!!!!!!!!!!!!!!!!
 					//System.out.println("MinSpace="+ txtMinSpace.getText() );
 					buffWriter.write("MinSpace="+ txtMinSpace.getText()  +"\n");
-					
+					buffWriter.write("DeleteFilesMinusDays="+txtCountDays.getText() +"\n");
+					buffWriter.write("[Paths]" +"\n");
+					buffWriter.write(+"\n");
 						
 					
 				} catch (IOException e1) {
