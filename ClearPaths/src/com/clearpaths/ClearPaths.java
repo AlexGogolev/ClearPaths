@@ -55,7 +55,7 @@ public class ClearPaths {
 		frmClearPaths.getContentPane().add(comboBoxDisks);
 		
 		JLabel label_1 = new JLabel("\u041C\u0438\u043D. \u043E\u0431\u044A\u0435\u043C \u0434\u0438\u0441\u043A\u0430 (\u0413\u0431):");
-		label_1.setBounds(10, 36, 119, 14);
+		label_1.setBounds(10, 36, 127, 14);
 		frmClearPaths.getContentPane().add(label_1);
 		
 		txtFieldMinSpace = new JTextField();
