@@ -108,6 +108,7 @@ public class ClearPaths {
 		btnDel.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				//remove path from JTable
+				
 			}
 		});
 		btnDel.setBounds(369, 142, 41, 23);
