@@ -168,7 +168,8 @@ public class ClearPaths {
 					buffWriter.write("MinSpace="+ txtMinSpace.getText()  +"\n");
 					buffWriter.write("DeleteFilesMinusDays="+txtCountDays.getText() +"\n");
 					buffWriter.write("[Paths]" +"\n");
-					buffWriter.write(+"\n");
+					//дальше цикл по JTable
+					//buffWriter.write(+"\n");
 						
 					
 				} catch (IOException e1) {
