@@ -11,6 +11,9 @@ import javax.swing.table.DefaultTableModel;
 import javax.swing.JButton;
 import java.awt.Font;
 import java.io.File;
+import java.io.IOException;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class ClearPaths {
 
@@ -132,6 +135,24 @@ public class ClearPaths {
 		frmClearPaths.getContentPane().add(btnStop);
 		
 		JButton btnApply = new JButton("Apply");
+		btnApply.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				File fileSettings = new File("\\SrcFr\\clearPathSettings.ini");
+				boolean fileCreate;
+				if (!fileSettings.exists()) {
+					try {
+						fileCreate = fileSettings.createNewFile();						
+					} catch (IOException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
+				}
+				
+				//сохраняе настройки в файл настроек
+				
+			}
+		});
 		btnApply.setFont(new Font("Dialog", Font.PLAIN, 12));
 		btnApply.setBounds(161, 256, 98, 26);
 		frmClearPaths.getContentPane().add(btnApply);
@@ -141,7 +162,7 @@ public class ClearPaths {
 		
 		File[] roots = File.listRoots();
 		for (File file: roots) {
-		    System.out.println(file.getAbsolutePath());
+		    //System.out.println(file.getAbsolutePath());
 		    String name = file.getPath();
 		    comboBoxDisks.addItem(name);
 		}
